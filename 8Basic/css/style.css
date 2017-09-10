@@ -1,0 +1,23 @@
+body {
+  padding: 0.5% 0.5% 1.5% 0.5%;
+}
+
+#user-input-block {
+  margin: 0.5% 0 0.5% 0;
+}
+
+#go {
+  margin: 2% 0 2% 1%;
+}
+
+/*#result-text {
+  color:gray;
+}*/
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}

@@ -1,83 +1,94 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 
   <head>
-    <meta name="keywords" content="Michael Zhao, Weiyu Zhao, University of Toronto, Undergraduate, Road Conditions, Machine Learning"/>
-    <meta name="description" content="PCI Calculator home page."/>
-    <meta name="author" content="Michael Zhao"/>
-    <meta name="revised" content="08/13/2017"/>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link type="text/css" rel="stylesheet" href="style.css" />
-    <link type="text/css" rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="script.js"></script>
-    <title>PCI Calculator Hub | Michael Zhao | University of Toronto</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Michael Zhao">
+
+    <title>PCI Home</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet">
+
   </head>
 
-  <nav class="navbar navbar-inverse navbar-fixed-top">
+  <body>
+
     <div class="container-fluid">
-      <div class="collapse navbar-collapse" id="mynav">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="https://michaelweiyuzhao.github.io/">Home</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
 
-  <body style="padding-top:80px; padding-left:15px; padding-right:15px">
-
-    <div class="col-xs-12">
-      <div class="panel panel-default" >
-        <div class="panel-body">
-          <h2 style="padding-left:15px;padding-right:15px;">PCI Prediction App</h2>
-          <h3 style="padding-left:15px;padding-right:15px;">Predicting PCI Using Machine Learning Technology</h3>
-          <hr />
-          <div style="padding: 10px 15px 10px 15px;font-size:1.2em;">
-            <p>Pavement condition index (PCI) is used to assess the condition and remaining life of roads.
-               It is calculated based on a set of procedures set out by ASTM or MTO.
-               These approaches rely on the use of data about physical pavement distresses. Collecting such data can be expensive,
-               especially to smaller municipalities. This portal demonstrates how machine learning models can help municipalities
-               in predicting the PCI of roads using easy-to-collect and cost-effective data (freely available data).
-               The methodology and the App was partially funded by OGRA and conducted by a team of researchers at the university of Toronto in 2016-2017.</p>
-            <hr/>
-            <p>This App predicts deterioration in PCI values after three years (future amendments will add different time spans).
-               Because not all data can be available to all municipalities, the App uses three algorithms.
-               The first uses 8 basic attributes. The second uses 4 attributes (including precipitation data).
-               The third uses 4 attributes (including maintenance and rehabilitation history data).</p>
-            <p>This web app was developed using machine learning technologies to estimates deterioration of PCI of asphalt roads within three years.
-               Three algorithms were developed based on analysing data from a 1000 examples of road sections in the US and Canada (extracted from the LTPP database).</p>
-            <p>This App was developed through a joint research project between Marmak Information Technologies and the University of Toronto,
-               with collaboration from Ontario Good Roads Association.</p>
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="mynav">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="https://michaelweiyuzhao.github.io/">Home</a></li>
+            </ul>
           </div>
         </div>
-      </div>
-    </div>
+      </nav>
 
-    <div class="col-xs-12">
-      <div class="panel panel-default">
-        <div class="panel-body">
-          <label>Go to a PCI Calculator</label>
-          <div class="row">
-            <div class="col-xs-4">
-              <select class="form-control" id="PCICalc-selecter">
-                <option>Option 1: Calculator w/ 8 Basic Attributes</option>
-                <option>Option 2: Calculator w/ 4 Attributes Including Annual Precipitation</option>
-                <option>Option 3: Calculator w/ 4 Attributes Including Type of Maintenance/Rehabilitation</option>
-              </select>
+      <div class="boxed">
+
+        <div class="col-lg-12">
+          <div class="panel panel-default" >
+            <div class="panel-body">
+              <h2>PCI Prediction App</h2>
+              <h3>Predicting PCI Using Machine Learning Technology</h3>
+              <hr>
+              <div>
+                <p>Pavement condition index (PCI) is used to assess the condition and remaining life of roads.
+                   It is calculated based on a set of procedures set out by ASTM or MTO.
+                   These approaches rely on the use of data about physical pavement distresses. Collecting such data can be expensive,
+                   especially to smaller municipalities. This portal demonstrates how machine learning models can help municipalities
+                   in predicting the PCI of roads using easy-to-collect and cost-effective data (freely available data).
+                   The methodology and the App was partially funded by OGRA and conducted by a team of researchers at the university of Toronto in 2016-2017.</p>
+                <hr/>
+                <p>This App predicts deterioration in PCI values after three years (future amendments will add different time spans).
+                   Because not all data can be available to all municipalities, the App uses three algorithms.
+                   The first uses 8 basic attributes. The second uses 4 attributes (including precipitation data).
+                   The third uses 4 attributes (including maintenance and rehabilitation history data).</p>
+                <p>This web app was developed using machine learning technologies to estimates deterioration of PCI of asphalt roads within three years.
+                   Three algorithms were developed based on analysing data from a 1000 examples of road sections in the US and Canada (extracted from the LTPP database).</p>
+                <p>This App was developed through a joint research project between Marmak Information Technologies and the University of Toronto,
+                   with collaboration from Ontario Good Roads Association.</p>
+              </div>
             </div>
-            <a class="btn btn-primary" id="PCICalc-go" href="https://michaelweiyuzhao.github.io/PCICalcHub" role="button">Go</a>
           </div>
         </div>
+
+        <div class="col-lg-12">
+          <div class="panel panel-default">
+            <div class="panel-body sm-boxed">
+              <label>Go to a PCI Calculator</label>
+              <div class="row">
+                <div class="col-sm-4">
+                  <select class="form-control" id="PCICalc-selecter">
+                    <option>Option 1: Calculator w/ 8 Basic Attributes</option>
+                    <option>Option 2: Calculator w/ 4 Attributes Including Annual Precipitation</option>
+                    <option>Option 3: Calculator w/ 4 Attributes Including Type of Maintenance/Rehabilitation</option>
+                  </select>
+                </div>
+                <a class="btn btn-primary" id="PCICalc-go" href="https://michaelweiyuzhao.github.io/PCICalcHub" role="button">Go</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
+
     </div>
+
+    <nav class="navbar navbar-inverse navbar-fixed-bottom">
+      <div class="container">
+        <p class="navbar-text">Madeh Piryonesi - Michael Zhao | University of Toronto | 2017</p>
+      </div>
+    </nav>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
 
   </body>
-
-  <nav class="navbar navbar-inverse navbar-fixed-bottom">
-    <div class="container">
-      <p class="navbar-text">Madeh Piryonesi - Michael Zhao | University of Toronto | 2017</p>
-    </div>
-  </nav>
 
 </html>

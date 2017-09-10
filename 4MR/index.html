@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Michael Zhao">
+
+    <title>4 M&R</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet">
+
+  </head>
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="mynav">
+        <ul class="nav navbar-nav">
+          <li><a href="https://michaelweiyuzhao.github.io/PCICalcHub">Back</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <body style="padding-top:80px; padding-left:15px; padding-right:15px">
+    <div class="container-fluid">
+      <div id="header"></div>
+      <div id="description"></div>
+      <div id="calculator">
+
+        <div class="form-group" id="input fields">
+          <div class="row">
+            <div class="col-xs-4">
+              <div class="panel panel-default">
+                <div class="panel-body">
+
+                  <div id="user-input-block">
+                    <div class="panel panel-default">
+                      <div class="panel-body">
+                        <label for="PCI0">Current PCI</label>
+                        <p>The current (initial) value for PCI. This should be a <b>real number</b> between 0 and 100</p>
+                        <input class="form-control" id="PCI0" type="number" min="0" max="100" placeholder="0"></input>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div id="user-input-block">
+                    <div class="panel panel-default">
+                      <div class="panel-body">
+                        <label for="FREEZE_THAW_YR">Freeze-Thaw Cycles per Year</label>
+                        <p>Number of freeze-thaw cycles per year. This should be an integer number between 0 and 365.
+                           A freeze-thaw cycle is said to have occurred if the temperature crossed the freezing point in a calendar day.</p>
+                        <input class="form-control" id="FREEZE_THAW_YR" type="number" min="0" max="365" increment="1" placeholder="0"></input>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div id="user-input-block">
+                    <div class="panel panel-default">
+                      <div class="panel-body">
+                        <label for="REMED_TYPE">Type of Last Maintenance & Rehabilitation</label>
+                        <p>Type of last remedial action based on LTPP classification (please select one).</p>
+                        <select id="REMED_TYPE" class="form-control">
+                          <option>Crack Sealing</option>
+                          <option>Transverse Joint Sealing</option>
+                          <option>Lane-Shoulder Longitudinal Joint Sealing</option>
+                          <option>Full-Depth Transverse Joint Repair Patch</option>
+                          <option>Full-Depth Patching of PCC Pavement Other Than at Joint</option>
+                          <option>Partial-Depth Patching of PCC Pavement Other Than at Joint</option>
+                          <option>PCC Slab Replacement</option>
+                          <option>PCC Shoulder Restoration</option>
+                          <option>PCC Shoulder Replacement</option>
+                          <option>AC Shoulder Restoration</option>
+                          <option>AC Shoulder Replacement</option>
+                          <option>Grinding Surface</option>
+                          <option>Grooving Surface</option>
+                          <option>Pressure Grout Subsealing</option>
+                          <option>Asphalt Subsealing</option>
+                          <option>AC Overlay</option>
+                          <option>PCC Overlay</option>
+                          <option>Mechanical Premix Patch</option>
+                          <option>Manual Premix Spot Patch</option>
+                          <option>Machine Premix Patch</option>
+                          <option>Full-Depth Patch of AC Pavement</option>
+                          <option>Patch Pot Holes: Hand Spread, Compacted With Truck</option>
+                          <option>Skin Patching</option>
+                          <option>Strip Patching</option>
+                          <option>Surface Treatment, Single Layer</option>
+                          <option>Surface Treatment, Double Layer</option>
+                          <option>Surface Treatment, Three or More Layers</option>
+                          <option>Aggregate Seal Coat</option>
+                          <option>Sand Seal Coat</option>
+                          <option>Slurry Seal Coat</option>
+                          <option>Fog Seal Coat</option>
+                          <option>Prime Coat</option>
+                          <option>Tack Coat</option>
+                          <option>Dust Layering</option>
+                          <option>Longitudinal Subdrainage</option>
+                          <option>Transverse Subdrainage</option>
+                          <option>Drainage Blankets</option>
+                          <option>Well System</option>
+                          <option>Drainage Blankets With Longitudinal Drains</option>
+                          <option>Hot-Mix Recycled AC</option>
+                          <option>Cold-Mix Recycled AC</option>
+                          <option>Heater Scarification, Surface-Recycled AC</option>
+                          <option>Crack-and-Seat PCC Pavement as Base for New AC Surface</option>
+                          <option>Crack-and-Seat PCC Pavement as Base for New PPC Surface</option>
+                          <option>Recycled PCC</option>
+                          <option>Pressure Relief Joints in PCC Pavements</option>
+                          <option>Joint Load-Transfer Restoration in PCC Pavements</option>
+                          <option>Mill Off AC and Overlay With AC</option>
+                          <option>Mill Off AC and Overlay With PPC</option>
+                          <option>Other</option>
+                          <option>Partial-Depth Patching of PCC Pavements at Joints</option>
+                          <option>Mill Existing Pavement and Overlay With Hot-Mix AC</option>
+                          <option>Mill Existing Pavement and Overlay With Cold-Mix AC</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div id="user-input-block">
+                    <div class="panel panel-default">
+                      <div class="panel-body">
+                        <label for="REMED_YEARS">Years Since Last Maintenance & Rehabilitation</label>
+                        <p>Number of years since last remedial action occurred. This should be a <b>real number</b>.</p>
+                        <input class="form-control" id="REMED_YEARS" type="number" min="0" placeholder="0"></input>
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr />
+
+                  <div id="go">
+                    <button type="submit" class="btn btn-primary">Calculate PCI</button>
+                  </div>
+
+                  <div id="result">
+                    <label>Predicted PCI Value in Three Years</label>
+                    <div class="panel panel-default">
+                      <div class="panel-body" id="result-text">Press "Calculate PCI" for result</div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-8">
+              <div class="panel panel-default" style="height:300px; overflow-y:auto;">
+                <div class="panel-body">
+                  <h2 style="padding-left:15px;padding-right:15px;">Option 3: PCI Calculator with 4 Attributes Including Type of Maintenance/Rehabilitation</h2>
+                  <h4 style="padding-left:15px;padding-right:15px;">PCI Predictor created and designed at the University of Toronto Department of Civil Engineering</h4>
+                  <hr />
+                  <div style="padding: 10px 15px 10px 15px;font-size:1.2em;">
+                    <p>This web app is the result of a joint research project between Marmak Information Technologies
+                       and University of Toronto, with collaboration from Ontario Good Roads Association.</p>
+                    <p>It is developed based on machine learning algorithms to estimates the PCI of asphalt roads in the short term.
+                       Models are developed after analysing the data of 1000 examples of road sections in the US and Canada.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-8">
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  <label>Switch to a Different Calculator</label>
+                  <div class="row">
+                    <div class="col-xs-4">
+                      <select class="form-control" id="PCICalc-selecter">
+                        <option>Option 1: Calculator w/ 8 Basic Attributes</option>
+                        <option>Option 2: Calculator w/ 4 Attributes Including Annual Precipitation</option>
+                        <option>Option 3: Calculator w/ 4 Attributes Including Type of Maintenance/Rehabilitation</option>
+                      </select>
+                    </div>
+                    <a class="btn btn-primary" id="PCICalc-go" href="https://michaelweiyuzhao.github.io/PCICalcHub" role="button">Go</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+    
+  </body>
+
+</html>
