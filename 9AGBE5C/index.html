@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Michael Zhao">
 
-    <title>4 M&R</title>
+    <title>9 Attr GBE 5 Classes</title>
 
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="css/style.css" rel="stylesheet">
@@ -44,8 +44,38 @@
                         <div class="panel panel-default">
                           <div class="panel-body">
                             <label for="PCI0">Current PCI</label>
-                            <p>The current (initial) value for PCI. This should be a <b>real number</b> between 0 and 100</p>
+                            <p>The current (initial) value for PCI. This should be a <b>real number between</b> 0 and 100.</p>
                             <input class="form-control" id="PCI0" type="number" min="0" max="100" placeholder="0"></input>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div id="user-input-block">
+                        <div class="panel panel-default">
+                          <div class="panel-body">
+                            <label for="AADT_ALL_VEHIC_2WAY">AADT_ALL_VEHIC_2WAY</label>
+                            <p></p>
+                            <input class="form-control" type="number" id="AADT_ALL_VEHIC_2WAY" placeholder="0"></input>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div id="user-input-block">
+                        <div class="panel panel-default">
+                          <div class="panel-body">
+                            <label for="AGE">Age</label>
+                            <p>Age of road (number of years since construction). This should be an <b>integer number</b>.</p>
+                            <input class="form-control" type="number" id="AGE" placeholder="0"></input>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div id="user-input-block">
+                        <div class="panel panel-default">
+                          <div class="panel-body">
+                            <label for="FREEZE_INDEX_YR">Annual Freeze Index</label>
+                            <p>Calculated freeze index as a real number in Celsius days. The index refers to the magnitude and duration of annual freezing periods This should be a <b>real number</b>.</p>
+                            <input class="form-control" type="number" id="FREEZE_INDEX_YR" placeholder="0"></input>
                           </div>
                         </div>
                       </div>
@@ -56,7 +86,77 @@
                             <label for="FREEZE_THAW_YR">Freeze-Thaw Cycles per Year</label>
                             <p>Number of freeze-thaw cycles per year. This should be an integer number between 0 and 365.
                                A freeze-thaw cycle is said to have occurred if the temperature crossed the freezing point in a calendar day.</p>
-                            <input class="form-control" id="FREEZE_THAW_YR" type="number" min="0" max="365" increment="1" placeholder="0"></input>
+                            <input class="form-control" type="number" id="FREEZE_THAW_YR" placeholder="0"></input>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div id="user-input-block">
+                        <div class="panel panel-default">
+                          <div class="panel-body">
+                            <label for="GBE">GBE</label>
+                            <p>Total annual precipitation in millimeters. This should be a <b>real number</b>.</p>
+                            <input class="form-control" type="number" id="GBE" placeholder="0"></input>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div id="user-input-block">
+                        <div class="panel panel-default">
+                          <div class="panel-body">
+                            <label for="PAVEMENT_TYPE">Type of Pavement</label>
+                            <p>Type of pavement based on LTPP classification (please select one).</p>
+                            <select id="PAVEMENT_TYPE" class="form-control">
+                              <option>JRCP - Placed Directly on Untreated Subgrade</option>
+                              <option>CRCP - Placed Directly on Untreated Subgrade</option>
+                              <option>JPCP - Placed Directly on Treated Subgrade</option>
+                              <option>JRCP - Placed Directly on Treated Subgrade</option>
+                              <option>CRCP - Placed Directly on Treated Subgrade</option>
+                              <option>AC with Granular Base</option>
+                              <option>AC with Bituminous Treated Base</option>
+                              <option>AC Overlay on AC Pavement</option>
+                              <option>JPCP Overlay on AC Pavement</option>
+                              <option>JRCP Overlay on AC Pavement</option>
+                              <option>CRCP Overlay on AC Pavement</option>
+                              <option>AC with Non-Bituminous Treated Base</option>
+                              <option>Other</option>
+                              <option>JPCP - Placed Directly on Untreated Subgrade</option>
+                              <option>JPCP Overlay on CRCP Pavement</option>
+                              <option>JRCP Overlay on CRCP Pavement</option>
+                              <option>CRCP Overlay on CRCP Pavement</option>
+                              <option>CRCP Overlay on JPCP Pavement</option>
+                              <option>CRCP Overlay on JRCP Pavement</option>
+                              <option>Prestressed Concrete Pavement</option>
+                              <option>JPCP with Asphalt Concrete Wearing Surface</option>
+                              <option>JRCP with Asphalt Concrete Wearing Surface</option>
+                              <option>CRCP with Asphalt Concrete Wearing Surface</option>
+                              <option>JPCP - Over Unbound Base</option>
+                              <option>JRCP - Over Unbound Base</option>
+                              <option>CRCP - Over Unbound Base</option>
+                              <option>JPCP Over Bituminous Treated Base</option>
+                              <option>JRCP Over Bituminous Treated Base</option>
+                              <option>CRCP Over Bituminous Treated Base</option>
+                              <option>JPCP Over Non-Bituminous Treated Base</option>
+                              <option>JRCP Over Non-Bituminous Treated Base</option>
+                              <option>CRCP Over Non-Bituminous Treated Base</option>
+                              <option>AC Overlay on JPCP Pavement</option>
+                              <option>AC Overlay on JRCP Pavement</option>
+                              <option>AC Overlay on CRCP Pavement</option>
+                              <option>JPCP Overlay on JPCP Pavement</option>
+                              <option>JRCP Overlay on JPCP Pavement</option>
+                              <option>JPCP Overlay on JRCP Pavement</option>
+                              <option>JRCP Overlay on JRCP Pavement</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div id="user-input-block">
+                        <div class="panel panel-default">
+                          <div class="panel-body">
+                            <label for="REMED_YEARS">Years Since Last Maintenance & Rehabilitation</label>
+                            <p>Number of years since last remedial action occurred. This should be a <b>real number</b>.</p>
+                            <input class="form-control" id="REMED_YEARS" type="number" min="0" placeholder="0"></input>
                           </div>
                         </div>
                       </div>
@@ -125,20 +225,10 @@
                         </div>
                       </div>
 
-                      <div id="user-input-block">
-                        <div class="panel panel-default">
-                          <div class="panel-body">
-                            <label for="REMED_YEARS">Years Since Last Maintenance & Rehabilitation</label>
-                            <p>Number of years since last remedial action occurred. This should be a <b>real number</b>.</p>
-                            <input class="form-control" id="REMED_YEARS" type="number" min="0" placeholder="0"></input>
-                          </div>
-                        </div>
-                      </div>
-
                     </div>
                   </div>
 
-                  <hr />
+                  <hr/>
 
                   <div id="go">
                     <button type="submit" class="btn btn-primary">Calculate PCI</button>
@@ -158,7 +248,7 @@
             <div class="col-xs-8">
               <div class="panel panel-default" style="height:565px; overflow-y:auto;">
                 <div class="panel-body">
-                  <h2 style="padding-left:15px;padding-right:15px;">Option 3: PCI Calculator with 4 Attributes Including Type of Maintenance/Rehabilitation</h2>
+                  <h2 style="padding-left:15px;padding-right:15px;">Option 4: PCI Calculator with 9 Attributes with GBE and 5 Classes</h2>
                   <h4 style="padding-left:15px;padding-right:15px;">PCI Predictor created and designed at the University of Toronto Department of Civil Engineering</h4>
                   <hr />
                   <div style="padding: 10px 15px 10px 15px;font-size:1.2em;">

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Michael Zhao">
 
-    <title>8 Basic</title>
+    <title>10 Attr GBE Traf 5 Classes</title>
 
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="css/style.css" rel="stylesheet">
@@ -53,6 +53,16 @@
                       <div id="user-input-block">
                         <div class="panel panel-default">
                           <div class="panel-body">
+                            <label for="AADT">AADT</label>
+                            <p></p>
+                            <input class="form-control" id="AADT" type="number" min="0" max="100" placeholder="0"></input>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div id="user-input-block">
+                        <div class="panel panel-default">
+                          <div class="panel-body">
                             <label for="AGE">Age</label>
                             <p>Age of road (number of years since construction). This should be an <b>integer number</b>.</p>
                             <input class="form-control" type="number" id="AGE" placeholder="0"></input>
@@ -73,9 +83,10 @@
                       <div id="user-input-block">
                         <div class="panel panel-default">
                           <div class="panel-body">
-                            <label for="TOTAL_ANN_PRECIP">Annual Precipitation</label>
-                            <p>Total annual precipitation in millimeters. This should be a <b>real number</b>.</p>
-                            <input class="form-control" type="number" id="TOTAL_ANN_PRECIP" placeholder="0"></input>
+                            <label for="FREEZE_THAW_YR">Freeze-Thaw Cycles per Year</label>
+                            <p>Number of freeze-thaw cycles per year. This should be an integer number between 0 and 365.
+                               A freeze-thaw cycle is said to have occurred if the temperature crossed the freezing point in a calendar day.</p>
+                            <input class="form-control" id="FREEZE_THAW_YR" type="number" min="0" max="365" increment="1" placeholder="0"></input>
                           </div>
                         </div>
                       </div>
@@ -83,42 +94,9 @@
                       <div id="user-input-block">
                         <div class="panel panel-default">
                           <div class="panel-body">
-                            <label for="MAX_ANN_TEMP_AVG">Average Maximum Annual Temperature</label>
-                            <p>Average maximum temperature in Celsius degrees. This should be a <b>real number</b>.</p>
-                            <input class="form-control" type="number" id="MAX_ANN_TEMP_AVG" placeholder="0"></input>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div id="user-input-block">
-                        <div class="panel panel-default">
-                          <div class="panel-body">
-                            <label for="MIN_ANN_TEMP_AVG">Average Minimum Annual Temperature</label>
-                            <p>Average minimum temperature in Celsius degrees. This should be a <b>real number</b>.</p>
-                            <input class="form-control" type="number" id="MIN_ANN_TEMP_AVG" placeholder="0"></input>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div id="user-input-block">
-                        <div class="panel panel-default">
-                          <div class="panel-body">
-                            <label for="FUNC_CLASS">Functional Class</label>
-                            <p>Functional class of road based on LTPP classification (please select one).</p>
-                            <select id="FUNC_CLASS" class="form-control">
-                              <option>Rural Principal Arterial - Interstate</option>
-                              <option>Rural Principal Arterial - Other</option>
-                              <option>Rural Minor Arterial</option>
-                              <option>Rural Major Collector</option>
-                              <option>Rural Minor Collector</option>
-                              <option>Rural Local Collector</option>
-                              <option>Urban Principal Arterial - Interstate</option>
-                              <option>Urban Principal Arterial - Other Freeways or Expressways</option>
-                              <option>Urban Other Principal Arterial</option>
-                              <option>Urban Minor Arterial</option>
-                              <option>Urban Collector</option>
-                              <option>Urban Local</option>
-                            </select>
+                            <label for="GBE">GBE</label>
+                            <p></p>
+                            <input class="form-control" id="GBE" type="number" min="0" max="365" increment="1" placeholder="0"></input>
                           </div>
                         </div>
                       </div>
@@ -173,6 +151,36 @@
                         </div>
                       </div>
 
+                      <div id="user-input-block">
+                        <div class="panel panel-default">
+                          <div class="panel-body">
+                            <label for="MAX_ANN_TEMP_AVG">Average Maximum Annual Temperature</label>
+                            <p>Average maximum temperature in Celsius degrees. This should be a <b>real number</b>.</p>
+                            <input class="form-control" type="number" id="MAX_ANN_TEMP_AVG" placeholder="0"></input>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div id="user-input-block">
+                        <div class="panel panel-default">
+                          <div class="panel-body">
+                            <label for="REMED_YEARS">Years Since Last Maintenance & Rehabilitation</label>
+                            <p>Number of years since last remedial action occurred. This should be a <b>real number</b>.</p>
+                            <input class="form-control" id="REMED_YEARS" type="number" min="0" placeholder="0"></input>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div id="user-input-block">
+                        <div class="panel panel-default">
+                          <div class="panel-body">
+                            <label for="TOTAL_ANN_PRECIP">Annual Precipitation</label>
+                            <p>Total annual precipitation in millimeters. This should be a <b>real number</b>.</p>
+                            <input class="form-control" type="number" id="TOTAL_ANN_PRECIP" placeholder="0"></input>
+                          </div>
+                        </div>
+                      </div>
+
                     </div>
                   </div>
 
@@ -196,9 +204,9 @@
             <div class="col-xs-8">
               <div class="panel panel-default" style="height:565px; overflow-y:auto;">
                 <div class="panel-body">
-                  <h2 style="padding-left:15px;padding-right:15px;">Option 1: PCI Calculator with 8 Basic Attributes</h2>
+                  <h2 style="padding-left:15px;padding-right:15px;">Option 5: Calculator w/ 10 Attributes with GBE and Traffic and 5 Classes</h2>
                   <h4 style="padding-left:15px;padding-right:15px;">PCI Predictor created and designed at the University of Toronto Department of Civil Engineering</h4>
-                  <hr />
+                  <hr>
                   <div style="padding: 10px 15px 10px 15px;font-size:1.2em;">
                     <p>This web app is the result of a joint research project between Marmak Information Technologies
                        and University of Toronto, with collaboration from Ontario Good Roads Association.</p>
