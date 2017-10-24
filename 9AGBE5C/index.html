@@ -94,9 +94,30 @@
                       <div id="user-input-block">
                         <div class="panel panel-default">
                           <div class="panel-body">
-                            <label for="GBE">GBE</label>
-                            <p>Total annual precipitation in millimeters. This should be a <b>real number</b>.</p>
-                            <input class="form-control" type="number" id="GBE" placeholder="0"></input>
+                            <div id="GBE-dynamic-block">
+                              <label for="GBE">Granular Base Equivalence</label>
+                              <p>Granular Base Equivalence based on type and of layer and thickness.</p>
+                              <p>Type of layer based on LTPP classification (please select one) and thickness of layer in inches (<b>real number</b>).</p>
+                              <div class="row">
+                                <div class="col-xs-6">
+                                  <select id="GBE_TYPE" class="form-control GBE_TYPE">
+                                    <option>Granular Base</option>
+                                    <option>Granular (Unbound) Subbase</option>
+                                    <option>Treated (Bound) Base</option>
+                                    <option>Treated (Bound) Subbase</option>
+                                    <option>Subgrade (Untreated)</option>
+                                    <option>Portland Cement Concrete</option>
+                                    <option>Engineering Fabric</option>
+                                    <option>Asphalt Concrete</option>
+                                  </select>
+                                </div>
+                                <div class="col-xs-6">
+                                  <input class="form-control GBE_THICK" type="number" id="GBE_THICK" placeholder="0"></input>
+                                </div>
+                              </div>
+                            </div>
+                            <br>
+                            <a class="btn btn-primary" onClick="addGBE('GBE-dynamic-block');">Add layer</a>
                           </div>
                         </div>
                       </div>

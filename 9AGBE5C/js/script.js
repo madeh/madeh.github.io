@@ -1,3 +1,23 @@
+function addGBE(divName){
+  var newbr = document.createElement("br");
+  var newdiv = document.createElement('div');
+  newdiv.className = "row";
+  newdiv.innerHTML = "<div class=\"col-xs-6\">" +
+    "<select id=\"GBE_TYPE\" class=\"form-control GBE_TYPE\">" +
+    "<option>Granular Base</option>" +
+    "<option>Granular (Unbound) Subbase</option>" +
+    "<option>Treated (Bound) Base</option>" +
+    "<option>Treated (Bound) Subbase</option>" +
+    "<option>Subgrade (Untreated)</option>" +
+    "<option>Portland Cement Concrete</option>" +
+    "option>Engineering Fabric</option>" +
+    "<option>Asphalt Concrete</option></select></div>" +
+    "<div class=\"col-xs-6\">" +
+    "<input class=\"form-control GBE_THICK\" type=\"number\" id=\"GBE_THICK\" placeholder=\"0\"></input></div>";
+  document.getElementById(divName).appendChild(newbr);
+  document.getElementById(divName).appendChild(newdiv);
+}
+
 $(document).ready(function(){
   var PCI0;
   var AADT_ALL_VEHIC_2WAY;
@@ -12,6 +32,17 @@ $(document).ready(function(){
   var result_string = "";
 
   //preprocessing
+  var gbe_type_cfg =  "1,Granular Base\n" +
+                      "0.67,Granular (Unbound) Subbase\n" +
+                      "1.7,Treated (Bound) Base\n" +
+                      "0.67,Treated (Bound) Subbase\n" +
+                      "0.67,Subgrade (Untreated)\n" +
+                      "1.33,Portland Cement Concrete\n" +
+                      "1.67,Engineering Fabric\n" +
+                      "2,Asphalt Concrete\n";
+
+  var gbe_type_parsed = CSVToArray(gbe_type_cfg,",");
+
   var pav_type_cfg =  "12,JRCP - Placed Directly on Untreated Subgrade\n" +
                       "13,CRCP - Placed Directly on Untreated Subgrade\n" +
                       "14,JPCP - Placed Directly on Treated Subgrade\n" +
@@ -54,7 +85,6 @@ $(document).ready(function(){
 
   var pav_type_parsed = CSVToArray(pav_type_cfg,",");
 
-  //preprocessing
   var main_rehab_cfg =  "1,Crack Sealing\n" +
                         "2,Transverse Joint Sealing\n" +
                         "3,Lane-Shoulder Longitudinal Joint Sealing\n" +
@@ -114,8 +144,9 @@ $(document).ready(function(){
   $("#go").click(function(){
     result_string = Foo($("#PCI0").val(),$("#AADT_ALL_VEHIC_2WAY").val(),
       $("#AGE").val(),$("#FREEZE_INDEX_YR").val(),$("#FREEZE_THAW_YR").val(),
-      $("#GBE").val(),DecodeType($("PAVEMENT_TYPE").val(),pav_type_parsed),
-      $("#REMED_YEARS").val(),DecodeType($("#REMED_TYPE").val(),main_rehab_parsed));
+      findGBE(".GBE_TYPE",".GBE_THICK"),
+      DecodeType($("PAVEMENT_TYPE").val(),pav_type_parsed),$("#REMED_YEARS").val(),
+      DecodeType($("#REMED_TYPE").val(),main_rehab_parsed));
     result.text(result_string);
   });
 
@@ -141,6 +172,25 @@ $(document).ready(function(){
     }
   });
 
+  function findGBE(type_class, thick_class){
+    var type_array = new Array();
+    $(type_class).each(function(i) {
+      console.log($(this).val());
+      type_array[i] = DecodeType($(this).val(),gbe_type_parsed);
+    });
+    var thick_array = new Array();
+    $(thick_class).each(function(i) {
+      console.log($(this).val());
+      thick_array[i] = $(this).val();
+    });
+    var gbe = 0;
+    $.each(type_array,function(i){
+      console.log(gbe);
+      gbe = gbe + (type_array[i]*thick_array[i]);
+    });
+    console.log(gbe);
+    return gbe;
+  }
 
   function CSVToArray( strData, strDelimiter ){
        // Check to see if the delimiter is defined. If not,
