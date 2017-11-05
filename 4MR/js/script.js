@@ -87,7 +87,7 @@ $(document).ready(function(){
       $("#PCICalc-go").attr("href", "../10AGBET5C/index.html");
     }
     else {
-      $("#PCICalc-go").attr("href", "https://michaelweiyuzhao.github.io/PCICalcHub");
+      $("#PCICalc-go").attr("href", "https://madeh.github.io/");
     }
   });
 
