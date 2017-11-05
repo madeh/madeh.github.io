@@ -100,7 +100,7 @@
                               <p>Type of layer based on LTPP classification (please select one) and thickness of layer in inches (<b>real number</b>).</p>
                               <div class="row">
                                 <div class="col-xs-6">
-                                  <select id="GBE_TYPE" class="form-control GBE_TYPE">
+                                  <select id="GBE_TYPE" class="form-control GBE_TYPE" onchange="gbe_change();">
                                     <option>Granular Base</option>
                                     <option>Granular (Unbound) Subbase</option>
                                     <option>Treated (Bound) Base</option>
@@ -112,12 +112,19 @@
                                   </select>
                                 </div>
                                 <div class="col-xs-6">
-                                  <input class="form-control GBE_THICK" type="number" id="GBE_THICK" placeholder="0"></input>
+                                  <input class="form-control GBE_THICK" type="number" id="GBE_THICK" placeholder="0" onchange="gbe_change();"></input>
                                 </div>
                               </div>
                             </div>
                             <br>
-                            <a class="btn btn-primary" onClick="addGBE('GBE-dynamic-block');">Add layer</a>
+                            <a id="add_gbe" class="btn btn-primary" onclick="gbe_click();">Add layer</a>
+                            <hr>
+                            <div id="gbe_result">
+                              <label>Calculated Total GBE</label>
+                              <div class="panel panel-default">
+                                <div class="panel-body" id="gbe_result-text">0</div>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
