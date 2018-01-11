@@ -77,11 +77,12 @@ function geocodeAddress(geocoder, infowindow, resultsMap) {
         } else if (pciResult.indexOf("Satisfactory") !== -1) {
           contentString += '\"color:#92d050;\"';
         } else if (pciResult.indexOf("Fair") !== -1) {
-          contentString += '\"color:#ffff00;\"';
+          contentString += '\"color:#ffd70f;\"';
+        } else if (pciResult.indexOf("Very Poor") !== -1) {
+          // check for Very Poor before Poor as "Very Poor" contains "Poor"
+          contentString += '\"color:#c00000;\"';
         } else if (pciResult.indexOf("Poor") !== -1) {
           contentString += '\"color:#ff0000;\"';
-        } else if (pciResult.indexOf("Very Poor") !== -1) {
-          contentString += '\"color:#c00000;\"';
         } else if (pciResult.indexOf("Serious") !== -1) {
           contentString += '\"color:#843c0c;\"';
         } else if (pciResult.indexOf("Failed") !== -1) {
