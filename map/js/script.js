@@ -13,7 +13,7 @@ function initMap() {
   ];
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 17,
-    center: {lat: 43.660165, lng: -79.394515},
+    center: { lat: 43.660165, lng: -79.394515 },
     gestureHandling: 'cooperative',
     disableDefaultUI: true,
     zoomControl: true,
@@ -71,7 +71,7 @@ function geocodeAddress(geocoder, infowindow, resultsMap) {
           document.getElementById('TOTAL_ANN_PRECIP').value
         );
 
-        var contentString = 'Calculated PCI: <b><span style=';
+        var contentString = 'Future PCI: <b><span style=';
         if (pciResult.indexOf("Good") !== -1) {
           contentString += '\"color:#00b050;\"';
         } else if (pciResult.indexOf("Satisfactory") !== -1) {
