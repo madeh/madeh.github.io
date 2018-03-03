@@ -105,6 +105,13 @@ function geocodeAddress(geocoder, infowindow, resultsMap) {
   });
 }
 
+function slider_change(){
+  var slider = document.getElementById("PCI-predict-year");
+  var output = document.getElementById("PCI-years");
+  output.innerHTML = slider.value;
+  output.innerHTML = this.value;
+}
+
 function addGBE(divName){
   var newbr = document.createElement("br");
   var newdiv = document.createElement('div');
