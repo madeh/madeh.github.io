@@ -28,11 +28,16 @@ function initMap() {
   document.getElementById('submit').addEventListener('click', function() {
     geocodeAddress(geocoder, infowindow, map);
   });
+
   document.getElementById('address').addEventListener('keypress', function(e) {
     var key = e.which || e.keyCode;
     if (key === 13) {
       geocodeAddress(geocoder, infowindow, map);
     }
+  });
+
+  document.getElementById('PCI-predict-year').addEventListener('click', function(){
+    slider_change();
   });
 }
 
@@ -58,39 +63,43 @@ function geocodeAddress(geocoder, infowindow, resultsMap) {
       }
       // if a road has been found, display infowindow
       if (matchedIndex !== -1){
-        var pciResult = Foo (
-          document.getElementById('PCI0').value,
-          document.getElementById('AADT').value,
-          document.getElementById('AGE').value,
-          document.getElementById('FREEZE_INDEX_YR').value,
-          document.getElementById('FREEZE_THAW_YR').value,
-          findGBE("GBE_TYPE","GBE_THICK"),
-          DecodeType(document.getElementById('PAVEMENT_TYPE').value,pav_type_parsed),
-          document.getElementById('MAX_ANN_TEMP_AVG').value,
-          document.getElementById('REMED_YEARS').value,
-          document.getElementById('TOTAL_ANN_PRECIP').value
-        );
+        if (check_inputs_valid()) {
+          var pciResult = Foo (
+            document.getElementById('PCI0').value,
+            document.getElementById('AADT').value,
+            document.getElementById('AGE').value,
+            document.getElementById('FREEZE_INDEX_YR').value,
+            document.getElementById('FREEZE_THAW_YR').value,
+            findGBE("GBE_TYPE","GBE_THICK"),
+            DecodeType(document.getElementById('PAVEMENT_TYPE').value,pav_type_parsed),
+            document.getElementById('MAX_ANN_TEMP_AVG').value,
+            document.getElementById('REMED_YEARS').value,
+            document.getElementById('TOTAL_ANN_PRECIP').value
+          );
 
-        var contentString = 'Future PCI: <b><span style=';
-        if (pciResult.indexOf("Good") !== -1) {
-          contentString += '\"color:#00b050;\"';
-        } else if (pciResult.indexOf("Satisfactory") !== -1) {
-          contentString += '\"color:#92d050;\"';
-        } else if (pciResult.indexOf("Fair") !== -1) {
-          contentString += '\"color:#ffd70f;\"';
-        } else if (pciResult.indexOf("Very Poor") !== -1) {
-          // check for Very Poor before Poor as "Very Poor" contains "Poor"
-          contentString += '\"color:#c00000;\"';
-        } else if (pciResult.indexOf("Poor") !== -1) {
-          contentString += '\"color:#ff0000;\"';
-        } else if (pciResult.indexOf("Serious") !== -1) {
-          contentString += '\"color:#843c0c;\"';
-        } else if (pciResult.indexOf("Failed") !== -1) {
-          contentString += '\"color:#8497b0;\"';
+          var contentString = 'Future PCI: <b><span style=';
+          if (pciResult.indexOf("Good") !== -1) {
+            contentString += '\"color:#00b050;\"';
+          } else if (pciResult.indexOf("Satisfactory") !== -1) {
+            contentString += '\"color:#92d050;\"';
+          } else if (pciResult.indexOf("Fair") !== -1) {
+            contentString += '\"color:#ffd70f;\"';
+          } else if (pciResult.indexOf("Very Poor") !== -1) {
+            // check for Very Poor before Poor as "Very Poor" contains "Poor"
+            contentString += '\"color:#c00000;\"';
+          } else if (pciResult.indexOf("Poor") !== -1) {
+            contentString += '\"color:#ff0000;\"';
+          } else if (pciResult.indexOf("Serious") !== -1) {
+            contentString += '\"color:#843c0c;\"';
+          } else if (pciResult.indexOf("Failed") !== -1) {
+            contentString += '\"color:#8497b0;\"';
+          } else {
+            contentString += '\"color:#000000;\"';
+          }
+          contentString += '>' + pciResult + '</span></b>';
         } else {
-          contentString += '\"color:#000000;\"';
+          contentString = '<b><span style=\"color#8497b0;\">Unknown.</span></b> Please input data in Input Fields';
         }
-        contentString += '>' + pciResult + '</span></b>';
 
         resultsMap.fitBounds(results[matchedIndex].geometry.viewport);
         infowindow.setPosition(results[matchedIndex].geometry.location);
