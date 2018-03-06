@@ -36,9 +36,10 @@ function initMap() {
     }
   });
 
-  document.getElementById('PCI-predict-year').addEventListener('click', function(){
+  // TODO: outputs undefined
+  /* document.getElementById('PCI-predict-year').addEventListener('click', function(){
     slider_change();
-  });
+  }); */
 }
 
 function geocodeAddress(geocoder, infowindow, resultsMap) {
@@ -63,6 +64,7 @@ function geocodeAddress(geocoder, infowindow, resultsMap) {
       }
       // if a road has been found, display infowindow
       if (matchedIndex !== -1){
+        var contentString;
         if (check_inputs_valid()) {
           var pciResult = Foo (
             document.getElementById('PCI0').value,
@@ -77,7 +79,7 @@ function geocodeAddress(geocoder, infowindow, resultsMap) {
             document.getElementById('TOTAL_ANN_PRECIP').value
           );
 
-          var contentString = 'Future PCI: <b><span style=';
+          contentString = 'Future PCI: <b><span style=';
           if (pciResult.indexOf("Good") !== -1) {
             contentString += '\"color:#00b050;\"';
           } else if (pciResult.indexOf("Satisfactory") !== -1) {
@@ -112,6 +114,22 @@ function geocodeAddress(geocoder, infowindow, resultsMap) {
       alert('Geocode was not successful for the following reason: ' + status);
     }
   });
+}
+
+function check_inputs_valid(){
+  if (
+    document.getElementById('PCI0').value == 0,
+    document.getElementById('AADT').value == 0,
+    document.getElementById('AGE').value == 0,
+    document.getElementById('FREEZE_INDEX_YR').value == 0,
+    document.getElementById('FREEZE_THAW_YR').value == 0,
+    findGBE("GBE_TYPE","GBE_THICK") == 0,
+    document.getElementById('PAVEMENT_TYPE').value == 'JRCP - Placed Directly on Untreated Subgrade',
+    document.getElementById('MAX_ANN_TEMP_AVG').value == 0,
+    document.getElementById('REMED_YEARS').value == 0,
+    document.getElementById('TOTAL_ANN_PRECIP').value == 0
+  ) return 0;
+  else return 1;
 }
 
 function slider_change(){
