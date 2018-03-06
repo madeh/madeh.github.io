@@ -118,15 +118,15 @@ function geocodeAddress(geocoder, infowindow, resultsMap) {
 
 function check_inputs_valid(){
   if (
-    document.getElementById('PCI0').value == 0,
-    document.getElementById('AADT').value == 0,
-    document.getElementById('AGE').value == 0,
-    document.getElementById('FREEZE_INDEX_YR').value == 0,
-    document.getElementById('FREEZE_THAW_YR').value == 0,
-    findGBE("GBE_TYPE","GBE_THICK") == 0,
-    document.getElementById('PAVEMENT_TYPE').value == 'JRCP - Placed Directly on Untreated Subgrade',
-    document.getElementById('MAX_ANN_TEMP_AVG').value == 0,
-    document.getElementById('REMED_YEARS').value == 0,
+    document.getElementById('PCI0').value == 0 &&
+    document.getElementById('AADT').value == 0 &&
+    document.getElementById('AGE').value == 0 &&
+    document.getElementById('FREEZE_INDEX_YR').value == 0 &&
+    document.getElementById('FREEZE_THAW_YR').value == 0 &&
+    findGBE("GBE_TYPE","GBE_THICK") == 0 &&
+    document.getElementById('PAVEMENT_TYPE').value == 'JRCP - Placed Directly on Untreated Subgrade' &&
+    document.getElementById('MAX_ANN_TEMP_AVG').value == 0 &&
+    document.getElementById('REMED_YEARS').value == 0 &&
     document.getElementById('TOTAL_ANN_PRECIP').value == 0
   ) return 0;
   else return 1;
