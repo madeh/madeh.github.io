@@ -347,13 +347,11 @@ function tree2(PCI0,AADT_ALL_VEHIC_2WAY,AGE,CONSTRUCTION_NO,FREEZE_INDEX_YR,FREE
                     }
                 }
                 if(CONSTRUCTION_NO > 2){
-                    console.log("CONSTRUCTION_NO > 2\n");
                     if(AGE <= 22.5){
                         console.log("Good (90%)");
                         return "Good (90%)";
                     }
                     if(AGE > 22.5){
-                        console.log("AGE > 22.5\n");
                         console.log("Satisfactory (100%)");
                         return "Satisfactory (100%)";
                     }
