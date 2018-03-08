@@ -213,8 +213,8 @@ function Foo(PCI0,AADT,AGE,FREEZE_INDEX_YR,FREEZE_THAW_YR,GBE,PAVEMENT_TYPE,MAX_
                                     return "Poor (100%)";
                                 }
                                 if(AADT > 19400){
-                                    console.log("Satisfactory (100%)");
-                                    return "Satisfactory (100%)";
+                                    console.log("Very Poor (100%)");
+                                    return "Very Poor (100%)";
                                 }
                             }
                         }

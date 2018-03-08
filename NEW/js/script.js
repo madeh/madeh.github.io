@@ -148,29 +148,29 @@ function tree2(PCI0,AADT_ALL_VEHIC_2WAY,AGE,CONSTRUCTION_NO,FREEZE_INDEX_YR,FREE
     if(PCI0 <= 85.1){
         if(PCI0 <= 55.5){
             if(PCI0 <= 42.5){
-                console.log("Very Poor (31.0)");
-                return "Very Poor (31.0)";
+                console.log("Very Poor (100%)");
+                return "Very Poor (100%)";
             }
             if(PCI0 > 42.5){
                 if(MIN_ANN_TEMP_AVG <= 8.1){
                     if(CONSTRUCTION_NO <= 4){
                         if(AADT_ALL_VEHIC_2WAY <= 1092){
-                            console.log("Very Poor (3.0/1.0)");
-                            return "Very Poor (3.0/1.0)";
+                            console.log("Very Poor (75%)");
+                            return "Very Poor (75%)";
                         }
                         if(AADT_ALL_VEHIC_2WAY > 1092){
-                            console.log("Poor (26.0/1.0)");
-                            return "Poor (26.0/1.0)";
+                            console.log("Poor (96%)");
+                            return "Poor (96%)";
                         }
                     }
                     if(CONSTRUCTION_NO > 4){
-                        console.log("Very Poor (2.0)");
-                        return "Very Poor (2.0)";
+                        console.log("Very Poor (100%)");
+                        return "Very Poor (100%)";
                     }
                 }
                 if(MIN_ANN_TEMP_AVG > 8.1){
-                    console.log("Very Poor (11.0)");
-                    return "Very Poor (11.0)";
+                    console.log("Very Poor (100%)");
+                    return "Very Poor (100%)";
                 }
             }
         }
@@ -180,17 +180,17 @@ function tree2(PCI0,AADT_ALL_VEHIC_2WAY,AGE,CONSTRUCTION_NO,FREEZE_INDEX_YR,FREE
                     if(FREEZE_THAW_YR <= 72){
                         if(TOTAL_ANN_PRECIP <= 1800){
                             if(FREEZE_INDEX_YR <= 36){
-                                console.log("Fair (11.0/1.0)");
-                                return "Fair (11.0/1.0)";
+                                console.log("Fair (92%)");
+                                return "Fair (92%)";
                             }
                             if(FREEZE_INDEX_YR > 36){
-                                console.log("Very Poor (3.0)");
-                                return "Very Poor (3.0)";
+                                console.log("Very Poor (100%)");
+                                return "Very Poor (100%)";
                             }
                         }
                         if(TOTAL_ANN_PRECIP > 1800){
-                            console.log("Very Poor (3.0/1.0)");
-                            return "Very Poor (3.0/1.0)";
+                            console.log("Very Poor (75%)");
+                            return "Very Poor (75%)";
                         }
                     }
                     if(FREEZE_THAW_YR > 72){
@@ -198,111 +198,111 @@ function tree2(PCI0,AADT_ALL_VEHIC_2WAY,AGE,CONSTRUCTION_NO,FREEZE_INDEX_YR,FREE
                             if(AGE <= 26.57){
                                 if(PCI0 <= 57.6){
                                     if(AGE <= 20.22){
-                                        console.log("Very Poor (2.0/1.0)");
-                                        return "Very Poor (2.0/1.0)";
+                                        console.log("Very Poor (67%)");
+                                        return "Very Poor (67%)";
                                     }
                                     if(AGE > 20.22){
-                                        console.log("Poor (5.0)");
-                                        return "Poor (5.0)";
+                                        console.log("Poor (100%)");
+                                        return "Poor (100%)";
                                     }
                                 }
                                 if(PCI0 > 57.6){
                                     if(FREEZE_THAW_YR <= 146){
                                         if(REMED_YEARS <= 1.9){
-                                            console.log("Fair (17.0/3.0)");
-                                            return "Fair (17.0/3.0)";
+                                            console.log("Fair (85%)");
+                                            return "Fair (85%)";
                                         }
                                         if(REMED_YEARS > 1.9){
-                                            console.log("Poor (3.0/1.0)");
-                                            return "Poor (3.0/1.0)";
+                                            console.log("Poor (75%)");
+                                            return "Poor (75%)";
                                         }
                                     }
                                     if(FREEZE_THAW_YR > 146){
-                                        console.log("Poor (3.0)");
-                                        return "Poor (3.0)";
+                                        console.log("Poor (100%)");
+                                        return "Poor (100%)";
                                     }
                                 }
                             }
                             if(AGE > 26.57){
-                                console.log("Very Poor (2.0)");
-                                return "Very Poor (2.0)";
+                                console.log("Very Poor (100%)");
+                                return "Very Poor (100%)";
                             }
                         }
                         if(PAVEMENT_TYPE > 3){
-                            console.log("Poor (5.0)");
-                            return "Poor (5.0)";
+                            console.log("Poor (100%)");
+                            return "Poor (100%)";
                         }
                     }
                 }
                 if(PCI0 > 68.8){
                     if(FREEZE_INDEX_YR <= 0){
-                        console.log("Poor (5.0/1.0)");
-                        return "Poor (5.0/1.0)";
+                        console.log("Poor (83%)");
+                        return "Poor (83%)";
                     }
                     if(FREEZE_INDEX_YR > 0){
                         if(GBE <= 126.77){
                             if(PAVEMENT_TYPE <= 7){
                                 if(REMED_YEARS <= 5.4){
                                     if(PAVEMENT_TYPE <= 1){
-                                        console.log("Satisfactory (15.0/2.0)");
-                                        return "Satisfactory (15.0/2.0)";
+                                        console.log("Satisfactory (88%)");
+                                        return "Satisfactory (88%)";
                                     }
                                     if(PAVEMENT_TYPE > 1){
                                         if(CONSTRUCTION_NO <= 1){
                                             if(PCI0 <= 72.3){
-                                                console.log("Fair (5.0/1.0)");
-                                                return "Fair (5.0/1.0)";
+                                                console.log("Fair (83%)");
+                                                return "Fair (83%)";
                                             }
                                             if(PCI0 > 72.3){
-                                                console.log("Satisfactory (3.0/1.0)");
-                                                return "Satisfactory (3.0/1.0)";
+                                                console.log("Satisfactory (75%)");
+                                                return "Satisfactory (75%)";
                                             }
                                         }
                                         if(CONSTRUCTION_NO > 1){
-                                            console.log("Satisfactory (3.0)");
-                                            return "Satisfactory (3.0)";
+                                            console.log("Satisfactory (100%)");
+                                            return "Satisfactory (100%)";
                                         }
                                     }
                                 }
                                 if(REMED_YEARS > 5.4){
                                     if(CONSTRUCTION_NO <= 2){
-                                        console.log("Fair (7.0)");
-                                        return "Fair (7.0)";
+                                        console.log("Fair (100%)");
+                                        return "Fair (100%)";
                                     }
                                     if(CONSTRUCTION_NO > 2){
-                                        console.log("Satisfactory (2.0)");
-                                        return "Satisfactory (2.0)";
+                                        console.log("Satisfactory (100%)");
+                                        return "Satisfactory (100%)";
                                     }
                                 }
                             }
                             if(PAVEMENT_TYPE > 7){
-                                console.log("Fair (4.0)");
-                                return "Fair (4.0)";
+                                console.log("Fair (100%)");
+                                return "Fair (100%)";
                             }
                         }
                         if(GBE > 126.77){
-                            console.log("Poor (2.0)");
-                            return "Poor (2.0)";
+                            console.log("Poor (100%)");
+                            return "Poor (100%)";
                         }
                     }
                 }
             }
             if(CONSTRUCTION_NO > 3){
                 if(FREEZE_INDEX_YR <= 81){
-                    console.log("Fair (54.0)");
-                    return "Fair (54.0)";
+                    console.log("Fair (100%)");
+                    return "Fair (100%)";
                 }
                 if(FREEZE_INDEX_YR > 81){
-                    console.log("Satisfactory (3.0)");
-                    return "Satisfactory (3.0)";
+                    console.log("Satisfactory (100%)");
+                    return "Satisfactory (100%)";
                 }
             }
         }
     }
     if(PCI0 > 85.1){
         if(PCI0 <= 88.2){
-            console.log("Satisfactory (28.0)");
-            return "Satisfactory (28.0)";
+            console.log("Satisfactory (100%)");
+            return "Satisfactory (100%)";
         }
         if(PCI0 > 88.2){
             if(CONSTRUCTION_NO <= 6){
@@ -311,96 +311,562 @@ function tree2(PCI0,AADT_ALL_VEHIC_2WAY,AGE,CONSTRUCTION_NO,FREEZE_INDEX_YR,FREE
                         if(FREEZE_THAW_YR <= 88){
                             if(PCI0 <= 96.4){
                                 if(AADT_ALL_VEHIC_2WAY <= 12572){
-                                    console.log("Good (11.0/2.0)");
-                                    return "Good (11.0/2.0)";
+                                    console.log("Good (85%)");
+                                    return "Good (85%)";
                                 }
                                 if(AADT_ALL_VEHIC_2WAY > 12572){
-                                    console.log("Very Poor (2.0)");
-                                    return "Very Poor (2.0)";
+                                    console.log("Very Poor (100%)");
+                                    return "Very Poor (100%)";
                                 }
                             }
                             if(PCI0 > 96.4){
                                 if(MAX_ANN_TEMP_AVG <= 20.8){
-                                    console.log("Satisfactory (2.0)");
-                                    return "Satisfactory (2.0)";
+                                    console.log("Satisfactory (100%)");
+                                    return "Satisfactory (100%)";
                                 }
                                 if(MAX_ANN_TEMP_AVG > 20.8){
-                                    console.log("Good (43.0/5.0)");
-                                    return "Good (43.0/5.0)";
+                                    console.log("Good (90%)");
+                                    return "Good (90%)";
                                 }
                             }
                         }
                         if(FREEZE_THAW_YR > 88){
                             if(PCI0 <= 91.2){
-                                console.log("Fair (4.0)");
-                                return "Fair (4.0)";
+                                console.log("Fair (100%)");
+                                return "Fair (100%)";
                             }
                             if(PCI0 > 91.2){
-                                console.log("Satisfactory (4.0/1.0)");
-                                return "Satisfactory (4.0/1.0)";
+                                console.log("Satisfactory (80%)");
+                                return "Satisfactory (80%)";
                             }
                         }
                     }
                     if(CONSTRUCTION_NO > 1){
-                        console.log("Good (35.0/5.0)");
-                        return "Good (35.0/5.0)";
+                        console.log("Good (88%)");
+                        return "Good (88%)";
                     }
                 }
                 if(CONSTRUCTION_NO > 2){
+                    console.log("CONSTRUCTION_NO > 2\n");
                     if(AGE <= 22.5){
-                        console.log("Good (9.0/1.0)");
-                        return "Good (9.0/1.0)";
+                        console.log("Good (90%)");
+                        return "Good (90%)";
                     }
                     if(AGE > 22.5){
-                        console.log("Satisfactory (18.0)");
-                        return "Satisfactory (18.0)";
+                        console.log("AGE > 22.5\n");
+                        console.log("Satisfactory (100%)");
+                        return "Satisfactory (100%)";
                     }
                 }
             }
             if(CONSTRUCTION_NO > 6){
                 if(AADT_ALL_VEHIC_2WAY <= 13172){
-                    console.log("Good (5.0)");
-                    return "Good (5.0)";
+                    console.log("Good (100%)");
+                    return "Good (100%)";
                 }
                 if(AADT_ALL_VEHIC_2WAY > 13172){
-                    console.log("Fair (5.0)");
-                    return "Fair (5.0)";
+                    console.log("Fair (100%)");
+                    return "Fair (100%)";
                 }
             }
         }
     }
 
-    return ""
+    return "";
 }
 
-function tree5(PCI0,AADT_ALL_VEHIC_2WAY,AGE,CONSTRUCTION_NO,FREEZE_INDEX_YR,FREEZE_THAW_YR,GBE,PAVEMENT_TYPE,MAX_ANN_TEMP_AVG,MIN_ANN_TEMP_AVG,REMED_YEARS,TOTAL_ANN_PRECIP){
+function tree3(PCI0,AADT_ALL_VEHIC_2WAY,AGE,FREEZE_INDEX_YR,FREEZE_THAW_YR,GBE,PAVEMENT_TYPE,MAX_ANN_TEMP_AVG,REMED_YEARS,TOTAL_ANN_PRECIP){
+
+    if(PCI0 <= 85.2){
+        if(PCI0 <= 64.6){
+            if(PCI0 <= 46.4){
+                if(AADT_ALL_VEHIC_2WAY <= 4290){
+                    if(AGE <= 26.61){
+                        console.log("Poor (83%)");
+                        return "Poor (83%)";
+                    }
+                    if(AGE > 26.61){
+                        console.log("Very Poor (100%)");
+                        return "Very Poor (100%)";
+                    }
+                }
+                if(AADT_ALL_VEHIC_2WAY > 4290){
+                    console.log("Very Poor (100%)");
+                    return "Very Poor (100%)";
+                }
+            }
+            if(PCI0 > 46.4){
+                if(GBE <= 58.672){
+                    if(PAVEMENT_TYPE <= 23){
+                        if(AGE <= 40.02){
+                            if(GBE <= 47.204){
+                                if(GBE <= 28.1){
+                                    console.log("Poor (86%)");
+                                    return "Poor (86%)";
+                                }
+                                if(GBE > 28.1){
+                                    if(AADT_ALL_VEHIC_2WAY <= 14900){
+                                        if(FREEZE_THAW_YR <= 111){
+                                            if(PCI0 <= 55){
+                                                console.log("Very Poor (88%)");
+                                                return "Very Poor (88%)";
+                                            }
+                                            if(PCI0 > 55){
+                                                console.log("Poor (100%)");
+                                                return "Poor (100%)";
+                                            }
+                                        }
+                                        if(FREEZE_THAW_YR > 111){
+                                            if(MAX_ANN_TEMP_AVG <= 13){
+                                                console.log("Very Poor (100%)");
+                                                return "Very Poor (100%)";
+                                            }
+                                            if(MAX_ANN_TEMP_AVG > 13){
+                                                if(TOTAL_ANN_PRECIP <= 272){
+                                                    console.log("Poor (88%)");
+                                                    return "Poor (88%)";
+                                                }
+                                                if(TOTAL_ANN_PRECIP > 272){
+                                                    console.log("Fair (100%)");
+                                                    return "Fair (100%)";
+                                                }
+                                            }
+                                        }
+                                    }
+                                    if(AADT_ALL_VEHIC_2WAY > 14900){
+                                        console.log("Very Poor (100%)");
+                                        return "Very Poor (100%)";
+                                    }
+                                }
+                            }
+                            if(GBE > 47.204){
+                                if(AADT_ALL_VEHIC_2WAY <= 19400){
+                                    console.log("Poor (100%)");
+                                    return "Poor (100%)";
+                                }
+                                if(AADT_ALL_VEHIC_2WAY > 19400){
+                                    console.log("Very Poor (100%)");
+                                    return "Very Poor (100%)";
+                                }
+                            }
+                        }
+                        if(AGE > 40.02){
+                            console.log("Very Poor (90%)");
+                            return "Very Poor (90%)";
+                        }
+                    }
+                    if(PAVEMENT_TYPE > 23){
+                        if(FREEZE_THAW_YR <= 76){
+                            console.log("Fair (100%)");
+                            return "Fair (100%)";
+                        }
+                        if(FREEZE_THAW_YR > 76){
+                            console.log("Very Poor (100%)");
+                            return "Very Poor (100%)";
+                        }
+                    }
+                }
+                if(GBE > 58.672){
+                    if(TOTAL_ANN_PRECIP <= 876.6){
+                        console.log("Fair (100%)");
+                        return "Fair (100%)";
+                    }
+                    if(TOTAL_ANN_PRECIP > 876.6){
+                        console.log("Very Poor (82%)");
+                        return "Very Poor (82%)";
+                    }
+                }
+            }
+        }
+        if(PCI0 > 64.6){
+            if(AGE <= 40.96){
+                if(PCI0 <= 70.6){
+                    if(TOTAL_ANN_PRECIP <= 229.4){
+                        if(PCI0 <= 68.2){
+                            console.log("Very Poor (100%)");
+                            return "Very Poor (100%)";
+                        }
+                        if(PCI0 > 68.2){
+                            console.log("Fair (100%)");
+                            return "Fair (100%)";
+                        }
+                    }
+                    if(TOTAL_ANN_PRECIP > 229.4){
+                        if(AADT_ALL_VEHIC_2WAY <= 6101){
+                            if(TOTAL_ANN_PRECIP <= 957.7){
+                                console.log("Fair (96%)");
+                                return "Fair (96%)";
+                            }
+                            if(TOTAL_ANN_PRECIP > 957.7){
+                                console.log("Very Poor (100%)");
+                                return "Very Poor (100%)";
+                            }
+                        }
+                        if(AADT_ALL_VEHIC_2WAY > 6101){
+                            if(GBE <= 77.78){
+                                if(PCI0 <= 69){
+                                    console.log("Fair (95%)");
+                                    return "Fair (95%)";
+                                }
+                                if(PCI0 > 69){
+                                    if(REMED_YEARS <= 7.7){
+                                        console.log("Poor (100%)");
+                                        return "Poor (100%)";
+                                    }
+                                    if(REMED_YEARS > 7.7){
+                                        console.log("Fair (100%)");
+                                        return "Fair (100%)";
+                                    }
+                                }
+                            }
+                            if(GBE > 77.78){
+                                console.log("Poor (100%)");
+                                return "Poor (100%)";
+                            }
+                        }
+                    }
+                }
+                if(PCI0 > 70.6){
+                    if(MAX_ANN_TEMP_AVG <= 28.3){
+                        if(GBE <= 38.24){
+                            if(REMED_YEARS <= 11){
+                                if(FREEZE_THAW_YR <= 19){
+                                    console.log("Satisfactory (93%)");
+                                    return "Satisfactory (93%)";
+                                }
+                                if(FREEZE_THAW_YR > 19){
+                                    if(MAX_ANN_TEMP_AVG <= 14.6){
+                                        console.log("Poor (67%)");
+                                        return "Poor (67%)";
+                                    }
+                                    if(MAX_ANN_TEMP_AVG > 14.6){
+                                        if(AADT_ALL_VEHIC_2WAY <= 23600){
+                                            if(AADT_ALL_VEHIC_2WAY <= 8000){
+                                                if(AGE <= 10.98){
+                                                    console.log("Fair (80%)");
+                                                    return "Fair (80%)";
+                                                }
+                                                if(AGE > 10.98){
+                                                    if(FREEZE_INDEX_YR <= 55){
+                                                        console.log("Satisfactory (100%)");
+                                                        return "Satisfactory (100%)";
+                                                    }
+                                                    if(FREEZE_INDEX_YR > 55){
+                                                        if(MAX_ANN_TEMP_AVG <= 18.9){
+                                                            if(GBE <= 31.52){
+                                                                console.log("Satisfactory (100%)");
+                                                                return "Satisfactory (100%)";
+                                                            }
+                                                            if(GBE > 31.52){
+                                                                console.log("Fair (75%)");
+                                                                return "Fair (75%)";
+                                                            }
+                                                        }
+                                                        if(MAX_ANN_TEMP_AVG > 18.9){
+                                                            console.log("Fair (100%)");
+                                                            return "Fair (100%)";
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            if(AADT_ALL_VEHIC_2WAY > 8000){
+                                                console.log("Fair (95%)");
+                                                return "Fair (95%)";
+                                            }
+                                        }
+                                        if(AADT_ALL_VEHIC_2WAY > 23600){
+                                            if(AADT_ALL_VEHIC_2WAY <= 30000){
+                                                console.log("Satisfactory (100%)");
+                                                return "Satisfactory (100%)";
+                                            }
+                                            if(AADT_ALL_VEHIC_2WAY > 30000){
+                                                console.log("Very Poor (75%)");
+                                                return "Very Poor (75%)";
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            if(REMED_YEARS > 11){
+                                if(REMED_YEARS <= 12){
+                                    console.log("Poor (100%)");
+                                    return "Poor (100%)";
+                                }
+                                if(REMED_YEARS > 12){
+                                    console.log("Fair (88%)");
+                                    return "Fair (88%)";
+                                }
+                            }
+                        }
+                        if(GBE > 38.24){
+                            if(PCI0 <= 73.3){
+                                console.log("Very Poor (100%)");
+                                return "Very Poor (100%)";
+                            }
+                            if(PCI0 > 73.3){
+                                if(FREEZE_INDEX_YR <= 641){
+                                    if(AGE <= 19.24){
+                                        console.log("Very Poor (67%)");
+                                        return "Very Poor (67%)";
+                                    }
+                                    if(AGE > 19.24){
+                                        console.log("Satisfactory (100%)");
+                                        return "Satisfactory (100%)";
+                                    }
+                                }
+                                if(FREEZE_INDEX_YR > 641){
+                                    console.log("Fair (100%)");
+                                    return "Fair (100%)";
+                                }
+                            }
+                        }
+                    }
+                    if(MAX_ANN_TEMP_AVG > 28.3){
+                        console.log("Fair (97%)");
+                        return "Fair (97%)";
+                    }
+                }
+            }
+            if(AGE > 40.96){
+                if(PCI0 <= 84.2){
+                    console.log("Satisfactory (100%)");
+                    return "Satisfactory (100%)";
+                }
+                if(PCI0 > 84.2){
+                    console.log("Very Poor (100%)");
+                    return "Very Poor (100%)";
+                }
+            }
+        }
+    }
+    if(PCI0 > 85.2){
+        if(TOTAL_ANN_PRECIP <= 322){
+            if(AADT_ALL_VEHIC_2WAY <= 23600){
+                if(PCI0 <= 93.5){
+                    if(GBE <= 12.3){
+                        console.log("Good (86%)");
+                        return "Good (86%)";
+                    }
+                    if(GBE > 12.3){
+                        console.log("Satisfactory (100%)");
+                        return "Satisfactory (100%)";
+                    }
+                }
+                if(PCI0 > 93.5){
+                    console.log("Good (100%)");
+                    return "Good (100%)";
+                }
+            }
+            if(AADT_ALL_VEHIC_2WAY > 23600){
+                if(AGE <= 27.15){
+                    console.log("Very Poor (100%)");
+                    return "Very Poor (100%)";
+                }
+                if(AGE > 27.15){
+                    console.log("Satisfactory (100%)");
+                    return "Satisfactory (100%)";
+                }
+            }
+        }
+        if(TOTAL_ANN_PRECIP > 322){
+            if(PCI0 <= 97.4){
+                if(TOTAL_ANN_PRECIP <= 1630.8){
+                    if(MAX_ANN_TEMP_AVG <= 15.2){
+                        if(AGE <= 23.91){
+                            if(PCI0 <= 91.6){
+                                if(REMED_YEARS <= 1){
+                                    console.log("Good (83%)");
+                                    return "Good (83%)";
+                                }
+                                if(REMED_YEARS > 1){
+                                    if(REMED_YEARS <= 3.6){
+                                        console.log("Fair (75%)");
+                                        return "Fair (75%)";
+                                    }
+                                    if(REMED_YEARS > 3.6){
+                                        console.log("Satisfactory (100%)");
+                                        return "Satisfactory (100%)";
+                                    }
+                                }
+                            }
+                            if(PCI0 > 91.6){
+                                if(FREEZE_INDEX_YR <= 845){
+                                    console.log("Very Poor (67%)");
+                                    return "Very Poor (67%)";
+                                }
+                                if(FREEZE_INDEX_YR > 845){
+                                    console.log("Fair (100%)");
+                                    return "Fair (100%)";
+                                }
+                            }
+                        }
+                        if(AGE > 23.91){
+                            if(PCI0 <= 91.6){
+                                console.log("Fair (100%)");
+                                return "Fair (100%)";
+                            }
+                            if(PCI0 > 91.6){
+                                if(PCI0 <= 92.3){
+                                    console.log("Poor (100%)");
+                                    return "Poor (100%)";
+                                }
+                                if(PCI0 > 92.3){
+                                    console.log("Fair (67%)");
+                                    return "Fair (67%)";
+                                }
+                            }
+                        }
+                    }
+                    if(MAX_ANN_TEMP_AVG > 15.2){
+                        if(FREEZE_THAW_YR <= 11){
+                            console.log("Good (100%)");
+                            return "Good (100%)";
+                        }
+                        if(FREEZE_THAW_YR > 11){
+                            console.log("Satisfactory (87%)");
+                            return "Satisfactory (87%)";
+                        }
+                    }
+                }
+                if(TOTAL_ANN_PRECIP > 1630.8){
+                    console.log("Good (90%)");
+                    return "Good (90%)";
+                }
+            }
+            if(PCI0 > 97.4){
+                if(AGE <= 11.32){
+                    if(AGE <= 9.2){
+                        console.log("Satisfactory (75%)");
+                        return "Satisfactory (75%)";
+                    }
+                    if(AGE > 9.2){
+                        console.log("Poor (100%)");
+                        return "Poor (100%)";
+                    }
+                }
+                if(AGE > 11.32){
+                    if(AADT_ALL_VEHIC_2WAY <= 18600){
+                        if(AADT_ALL_VEHIC_2WAY <= 7950){
+                            if(FREEZE_THAW_YR <= 86){
+                                console.log("Good (94%)");
+                                return "Good (94%)";
+                            }
+                            if(FREEZE_THAW_YR > 86){
+                                if(FREEZE_THAW_YR <= 109){
+                                    if(AGE <= 38.8){
+                                        console.log("Fair (100%)");
+                                        return "Fair (100%)";
+                                    }
+                                    if(AGE > 38.8){
+                                        console.log("Good (100%)");
+                                        return "Good (100%)";
+                                    }
+                                }
+                                if(FREEZE_THAW_YR > 109){
+                                    console.log("Good (100%)");
+                                    return "Good (100%)";
+                                }
+                            }
+                        }
+                        if(AADT_ALL_VEHIC_2WAY > 7950){
+                            if(REMED_YEARS <= 0.1){
+                                if(TOTAL_ANN_PRECIP <= 791){
+                                    console.log("Good (100%)");
+                                    return "Good (100%)";
+                                }
+                                if(TOTAL_ANN_PRECIP > 791){
+                                    console.log("Satisfactory (88%)");
+                                    return "Satisfactory (88%)";
+                                }
+                            }
+                            if(REMED_YEARS > 0.1){
+                                if(GBE <= 25.997){
+                                    console.log("Satisfactory (95%)");
+                                    return "Satisfactory (95%)";
+                                }
+                                if(GBE > 25.997){
+                                    console.log("Good (95%)");
+                                    return "Good (95%)";
+                                }
+                            }
+                        }
+                    }
+                    if(AADT_ALL_VEHIC_2WAY > 18600){
+                        if(AGE <= 36.04){
+                            if(AGE <= 17.86){
+                                if(REMED_YEARS <= 0.4){
+                                    console.log("Fair (100%)");
+                                    return "Fair (100%)";
+                                }
+                                if(REMED_YEARS > 0.4){
+                                    console.log("Satisfactory (67%)");
+                                    return "Satisfactory (67%)";
+                                }
+                            }
+                            if(AGE > 17.86){
+                                if(AADT_ALL_VEHIC_2WAY <= 26450){
+                                    console.log("Satisfactory (89%)");
+                                    return "Satisfactory (89%)";
+                                }
+                                if(AADT_ALL_VEHIC_2WAY > 26450){
+                                    if(TOTAL_ANN_PRECIP <= 1177.5){
+                                        if(AGE <= 27.63){
+                                            console.log("Satisfactory (100%)");
+                                            return "Satisfactory (100%)";
+                                        }
+                                        if(AGE > 27.63){
+                                            console.log("Good (100%)");
+                                            return "Good (100%)";
+                                        }
+                                    }
+                                    if(TOTAL_ANN_PRECIP > 1177.5){
+                                        console.log("Good (100%)");
+                                        return "Good (100%)";
+                                    }
+                                }
+                            }
+                        }
+                        if(AGE > 36.04){
+                            console.log("Fair (86%)");
+                            return "Fair (86%)";
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    return "";
+}
+
+function tree5(PCI0,AADT_ALL_VEHIC_2WAY,AGE,FREEZE_INDEX_YR,FREEZE_THAW_YR,GBE,PAVEMENT_TYPE,MAX_ANN_TEMP_AVG,REMED_YEARS,TOTAL_ANN_PRECIP){
 
     if(PCI0 <= 65.6){
         if(PAVEMENT_TYPE <= 22){
             if(PCI0 <= 40.6){
-                console.log("5. Very Poor (29.0)");
-                return "5. Very Poor (29.0)";
+                console.log("Very Poor (100%)");
+                return "Very Poor (100%)";
             }
             if(PCI0 > 40.6){
                 if(AADT_ALL_VEHIC_2WAY <= 15229){
                     if(GBE <= 41.36){
-                        console.log("4. Poor (15.0/1.0)");
-                        return "4. Poor (15.0/1.0)";
+                        console.log("Poor (94%)");
+                        return "Poor (94%)";
                     }
                     if(GBE > 41.36){
-                        console.log("5. Very Poor (4.0)");
-                        return "5. Very Poor (4.0)";
+                        console.log("Very Poor (100%)");
+                        return "Very Poor (100%)";
                     }
                 }
                 if(AADT_ALL_VEHIC_2WAY > 15229){
-                    console.log("5. Very Poor (19.0/1.0)");
-                    return "5. Very Poor (19.0/1.0)";
+                    console.log("Very Poor (95%)");
+                    return "Very Poor (95%)";
                 }
             }
         }
         if(PAVEMENT_TYPE > 22){
-            console.log("3. Fair (3.0/1.0)");
-            return "3. Fair (3.0/1.0)";
+            console.log("Fair (75%)");
+            return "Fair (75%)";
         }
     }
     if(PCI0 > 65.6){
@@ -408,40 +874,40 @@ function tree5(PCI0,AADT_ALL_VEHIC_2WAY,AGE,CONSTRUCTION_NO,FREEZE_INDEX_YR,FREE
             if(PCI0 <= 96.5){
                 if(AGE <= 24.62){
                     if(REMED_YEARS <= 1.1){
-                        console.log("5. Very Poor (2.0/1.0)");
-                        return "5. Very Poor (2.0/1.0)";
+                        console.log("Very Poor (67%)");
+                        return "Very Poor (67%)";
                     }
                     if(REMED_YEARS > 1.1){
                         if(AGE <= 21.53){
                             if(GBE <= 48.4){
                                 if(PCI0 <= 86.5){
-                                    console.log("3. Fair (18.0)");
-                                    return "3. Fair (18.0)";
+                                    console.log("Fair (100%)");
+                                    return "Fair (100%)";
                                 }
                                 if(PCI0 > 86.5){
                                     if(AADT_ALL_VEHIC_2WAY <= 1535){
-                                        console.log("3. Fair (5.0)");
-                                        return "3. Fair (5.0)";
+                                        console.log("Fair (100%)");
+                                        return "Fair (100%)";
                                     }
                                     if(AADT_ALL_VEHIC_2WAY > 1535){
-                                        console.log("2. Satisfactory (5.0/1.0)");
-                                        return "2. Satisfactory (5.0/1.0)";
+                                        console.log("Satisfactory (83%)");
+                                        return "Satisfactory (83%)";
                                     }
                                 }
                             }
                             if(GBE > 48.4){
-                                console.log("2. Satisfactory (2.0)");
-                                return "2. Satisfactory (2.0)";
+                                console.log("Satisfactory (100%)");
+                                return "Satisfactory (100%)";
                             }
                         }
                         if(AGE > 21.53){
                             if(PCI0 <= 73.3){
-                                console.log("5. Very Poor (2.0)");
-                                return "5. Very Poor (2.0)";
+                                console.log("Very Poor (100%)");
+                                return "Very Poor (100%)";
                             }
                             if(PCI0 > 73.3){
-                                console.log("2. Satisfactory (8.0/1.0)");
-                                return "2. Satisfactory (8.0/1.0)";
+                                console.log("Satisfactory (89%)");
+                                return "Satisfactory (89%)";
                             }
                         }
                     }
@@ -449,22 +915,22 @@ function tree5(PCI0,AADT_ALL_VEHIC_2WAY,AGE,CONSTRUCTION_NO,FREEZE_INDEX_YR,FREE
                 if(AGE > 24.62){
                     if(REMED_YEARS <= 8){
                         if(AGE <= 30.48){
-                            console.log("3. Fair (25.0)");
-                            return "3. Fair (25.0)";
+                            console.log("Fair (100%)");
+                            return "Fair (100%)";
                         }
                         if(AGE > 30.48){
-                            console.log("5. Very Poor (3.0)");
-                            return "5. Very Poor (3.0)";
+                            console.log("Very Poor (100%)");
+                            return "Very Poor (100%)";
                         }
                     }
                     if(REMED_YEARS > 8){
                         if(PCI0 <= 73.3){
-                            console.log("3. Fair (2.0)");
-                            return "3. Fair (2.0)";
+                            console.log("Fair (100%)");
+                            return "Fair (100%)";
                         }
                         if(PCI0 > 73.3){
-                            console.log("4. Poor (5.0)");
-                            return "4. Poor (5.0)";
+                            console.log("Poor (100%)");
+                            return "Poor (100%)";
                         }
                     }
                 }
@@ -475,61 +941,61 @@ function tree5(PCI0,AADT_ALL_VEHIC_2WAY,AGE,CONSTRUCTION_NO,FREEZE_INDEX_YR,FREE
                         if(MAX_ANN_TEMP_AVG <= 28){
                             if(FREEZE_INDEX_YR <= 0){
                                 if(AADT_ALL_VEHIC_2WAY <= 15229){
-                                    console.log("1. Good (15.0)");
-                                    return "1. Good (15.0)";
+                                    console.log("Good (100%)");
+                                    return "Good (100%)";
                                 }
                                 if(AADT_ALL_VEHIC_2WAY > 15229){
-                                    console.log("2. Satisfactory (5.0/1.0)");
-                                    return "2. Satisfactory (5.0/1.0)";
+                                    console.log("Satisfactory (83%)");
+                                    return "Satisfactory (83%)";
                                 }
                             }
                             if(FREEZE_INDEX_YR > 0){
                                 if(PCI0 <= 97.4){
-                                    console.log("2. Satisfactory (4.0)");
-                                    return "2. Satisfactory (4.0)";
+                                    console.log("Satisfactory (100%)");
+                                    return "Satisfactory (100%)";
                                 }
                                 if(PCI0 > 97.4){
                                     if(PAVEMENT_TYPE <= 1){
                                         if(AGE <= 20.12){
                                             if(AADT_ALL_VEHIC_2WAY <= 12300){
-                                                console.log("1. Good (2.0)");
-                                                return "1. Good (2.0)";
+                                                console.log("Good (100%)");
+                                                return "Good (100%)";
                                             }
                                             if(AADT_ALL_VEHIC_2WAY > 12300){
-                                                console.log("3. Fair (2.0)");
-                                                return "3. Fair (2.0)";
+                                                console.log("Fair (100%)");
+                                                return "Fair (100%)";
                                             }
                                         }
                                         if(AGE > 20.12){
-                                            console.log("2. Satisfactory (10.0)");
-                                            return "2. Satisfactory (10.0)";
+                                            console.log("Satisfactory (100%)");
+                                            return "Satisfactory (100%)";
                                         }
                                     }
                                     if(PAVEMENT_TYPE > 1){
                                         if(AADT_ALL_VEHIC_2WAY <= 9132){
                                             if(REMED_YEARS <= 1.4){
-                                                console.log("3. Fair (17.0/1.0)");
-                                                return "3. Fair (17.0/1.0)";
+                                                console.log("Fair (94%)");
+                                                return "Fair (94%)";
                                             }
                                             if(REMED_YEARS > 1.4){
                                                 if(REMED_YEARS <= 3){
-                                                    console.log("1. Good (2.0)");
-                                                    return "1. Good (2.0)";
+                                                    console.log("Good (100%)");
+                                                    return "Good (100%)";
                                                 }
                                                 if(REMED_YEARS > 3){
-                                                    console.log("3. Fair (4.0/2.0)");
-                                                    return "3. Fair (4.0/2.0)";
+                                                    console.log("Fair (67%)");
+                                                    return "Fair (67%)";
                                                 }
                                             }
                                         }
                                         if(AADT_ALL_VEHIC_2WAY > 9132){
                                             if(FREEZE_THAW_YR <= 65){
-                                                console.log("1. Good (2.0)");
-                                                return "1. Good (2.0)";
+                                                console.log("Good (100%)");
+                                                return "Good (100%)";
                                             }
                                             if(FREEZE_THAW_YR > 65){
-                                                console.log("2. Satisfactory (2.0)");
-                                                return "2. Satisfactory (2.0)";
+                                                console.log("Satisfactory (100%)");
+                                                return "Satisfactory (100%)";
                                             }
                                         }
                                     }
@@ -537,98 +1003,98 @@ function tree5(PCI0,AADT_ALL_VEHIC_2WAY,AGE,CONSTRUCTION_NO,FREEZE_INDEX_YR,FREE
                             }
                         }
                         if(MAX_ANN_TEMP_AVG > 28){
-                            console.log("3. Fair (16.0)");
-                            return "3. Fair (16.0)";
+                            console.log("Fair (100%)");
+                            return "Fair (100%)";
                         }
                     }
                     if(FREEZE_INDEX_YR > 241){
-                        console.log("4. Poor (5.0/1.0)");
-                        return "4. Poor (5.0/1.0)";
+                        console.log("Poor (83%)");
+                        return "Poor (83%)";
                     }
                 }
                 if(REMED_YEARS > 5.9){
-                    console.log("4. Poor (5.0)");
-                    return "4. Poor (5.0)";
+                    console.log("Poor (100%)");
+                    return "Poor (100%)";
                 }
             }
         }
         if(MAX_ANN_TEMP_AVG > 29.3){
-            console.log("2. Satisfactory (31.0)");
-            return "2. Satisfactory (31.0)";
+            console.log("Satisfactory (100%)");
+            return "Satisfactory (100%)";
         }
     }
 
-    return ""
+    return "";
 }
 
-function tree6(PCI0,AADT_ALL_VEHIC_2WAY,AGE,CONSTRUCTION_NO,FREEZE_INDEX_YR,FREEZE_THAW_YR,GBE,PAVEMENT_TYPE,MAX_ANN_TEMP_AVG,MIN_ANN_TEMP_AVG,REMED_YEARS,TOTAL_ANN_PRECIP){
+function tree6(PCI0,AADT_ALL_VEHIC_2WAY,AGE,FREEZE_INDEX_YR,FREEZE_THAW_YR,GBE,PAVEMENT_TYPE,MAX_ANN_TEMP_AVG,REMED_YEARS,TOTAL_ANN_PRECIP){
 
     if(PCI0 <= 73.3){
         if(MAX_ANN_TEMP_AVG <= 23.2){
             if(PCI0 <= 57.2){
-                console.log("Very Poor (29.0/1.0)");
-                return "Very Poor (29.0/1.0)";
+                console.log("Very Poor (97%)");
+                return "Very Poor (97%)";
             }
             if(PCI0 > 57.2){
                 if(GBE <= 56.755){
                     if(REMED_TYPE <= 3){
-                        console.log("Very Poor (4.0)");
-                        return "Very Poor (4.0)";
+                        console.log("Very Poor (100%)");
+                        return "Very Poor (100%)";
                     }
                     if(REMED_TYPE > 3){
                         if(PAVEMENT_TYPE <= 14){
                             if(MAX_ANN_TEMP_AVG <= 21.7){
-                                console.log("Poor (18.0)");
-                                return "Poor (18.0)";
+                                console.log("Poor (100%)");
+                                return "Poor (100%)";
                             }
                             if(MAX_ANN_TEMP_AVG > 21.7){
                                 if(FREEZE_INDEX_YR <= 62){
-                                    console.log("Very Poor (2.0)");
-                                    return "Very Poor (2.0)";
+                                    console.log("Very Poor (100%)");
+                                    return "Very Poor (100%)";
                                 }
                                 if(FREEZE_INDEX_YR > 62){
-                                    console.log("Fair (2.0/1.0)");
-                                    return "Fair (2.0/1.0)";
+                                    console.log("Fair (67%)");
+                                    return "Fair (67%)";
                                 }
                             }
                         }
                         if(PAVEMENT_TYPE > 14){
-                            console.log("Fair (2.0)");
-                            return "Fair (2.0)";
+                            console.log("Fair (100%)");
+                            return "Fair (100%)";
                         }
                     }
                 }
                 if(GBE > 56.755){
-                    console.log("Very Poor (9.0)");
-                    return "Very Poor (9.0)";
+                    console.log("Very Poor (100%)");
+                    return "Very Poor (100%)";
                 }
             }
         }
         if(MAX_ANN_TEMP_AVG > 23.2){
             if(REMED_YEARS <= 2.4){
-                console.log("Very Poor (3.0)");
-                return "Very Poor (3.0)";
+                console.log("Very Poor (100%)");
+                return "Very Poor (100%)";
             }
             if(REMED_YEARS > 2.4){
                 if(PAVEMENT_TYPE <= 3){
                     if(FREEZE_INDEX_YR <= 27){
                         if(MAX_ANN_TEMP_AVG <= 25.7){
-                            console.log("Fair (12.0)");
-                            return "Fair (12.0)";
+                            console.log("Fair (100%)");
+                            return "Fair (100%)";
                         }
                         if(MAX_ANN_TEMP_AVG > 25.7){
-                            console.log("Poor (12.0/2.0)");
-                            return "Poor (12.0/2.0)";
+                            console.log("Poor (86%)");
+                            return "Poor (86%)";
                         }
                     }
                     if(FREEZE_INDEX_YR > 27){
-                        console.log("Poor (2.0)");
-                        return "Poor (2.0)";
+                        console.log("Poor (100%)");
+                        return "Poor (100%)";
                     }
                 }
                 if(PAVEMENT_TYPE > 3){
-                    console.log("Poor (3.0)");
-                    return "Poor (3.0)";
+                    console.log("Poor (100%)");
+                    return "Poor (100%)";
                 }
             }
         }
@@ -638,73 +1104,73 @@ function tree6(PCI0,AADT_ALL_VEHIC_2WAY,AGE,CONSTRUCTION_NO,FREEZE_INDEX_YR,FREE
             if(GBE <= 31.727){
                 if(FREEZE_THAW_YR <= 97){
                     if(REMED_YEARS <= 1.8){
-                        console.log("Satisfactory (12.0)");
-                        return "Satisfactory (12.0)";
+                        console.log("Satisfactory (100%)");
+                        return "Satisfactory (100%)";
                     }
                     if(REMED_YEARS > 1.8){
                         if(AGE <= 26.45){
-                            console.log("Fair (2.0)");
-                            return "Fair (2.0)";
+                            console.log("Fair (100%)");
+                            return "Fair (100%)";
                         }
                         if(AGE > 26.45){
-                            console.log("Satisfactory (2.0)");
-                            return "Satisfactory (2.0)";
+                            console.log("Satisfactory (100%)");
+                            return "Satisfactory (100%)";
                         }
                     }
                 }
                 if(FREEZE_THAW_YR > 97){
-                    console.log("Good (5.0/1.0)");
-                    return "Good (5.0/1.0)";
+                    console.log("Good (83%)");
+                    return "Good (83%)";
                 }
             }
             if(GBE > 31.727){
-                console.log("Good (8.0)");
-                return "Good (8.0)";
+                console.log("Good (100%)");
+                return "Good (100%)";
             }
         }
         if(AADT_ALL_VEHIC_2WAY > 1690){
             if(AGE <= 27.37){
                 if(FREEZE_THAW_YR <= 86){
                     if(REMED_YEARS <= 0.3){
-                        console.log("Fair (19.0/1.0)");
-                        return "Fair (19.0/1.0)";
+                        console.log("Fair (95%)");
+                        return "Fair (95%)";
                     }
                     if(REMED_YEARS > 0.3){
                         if(GBE <= 24.682){
                             if(PCI0 <= 93.8){
-                                console.log("Fair (8.0/1.0)");
-                                return "Fair (8.0/1.0)";
+                                console.log("Fair (89%)");
+                                return "Fair (89%)";
                             }
                             if(PCI0 > 93.8){
                                 if(AGE <= 21.01){
-                                    console.log("Satisfactory (5.0/1.0)");
-                                    return "Satisfactory (5.0/1.0)";
+                                    console.log("Satisfactory (83%)");
+                                    return "Satisfactory (83%)";
                                 }
                                 if(AGE > 21.01){
-                                    console.log("Fair (3.0)");
-                                    return "Fair (3.0)";
+                                    console.log("Fair (100%)");
+                                    return "Fair (100%)";
                                 }
                             }
                         }
                         if(GBE > 24.682){
                             if(TOTAL_ANN_PRECIP <= 1492){
                                 if(GBE <= 73.94){
-                                    console.log("Satisfactory (28.0/1.0)");
-                                    return "Satisfactory (28.0/1.0)";
+                                    console.log("Satisfactory (97%)");
+                                    return "Satisfactory (97%)";
                                 }
                                 if(GBE > 73.94){
-                                    console.log("Fair (2.0)");
-                                    return "Fair (2.0)";
+                                    console.log("Fair (100%)");
+                                    return "Fair (100%)";
                                 }
                             }
                             if(TOTAL_ANN_PRECIP > 1492){
                                 if(PAVEMENT_TYPE <= 3){
-                                    console.log("Good (4.0)");
-                                    return "Good (4.0)";
+                                    console.log("Good (100%)");
+                                    return "Good (100%)";
                                 }
                                 if(PAVEMENT_TYPE > 3){
-                                    console.log("Satisfactory (2.0)");
-                                    return "Satisfactory (2.0)";
+                                    console.log("Satisfactory (100%)");
+                                    return "Satisfactory (100%)";
                                 }
                             }
                         }
@@ -714,69 +1180,69 @@ function tree6(PCI0,AADT_ALL_VEHIC_2WAY,AGE,CONSTRUCTION_NO,FREEZE_INDEX_YR,FREE
                     if(MAX_ANN_TEMP_AVG <= 20.4){
                         if(FREEZE_INDEX_YR <= 183){
                             if(AGE <= 19.4){
-                                console.log("Satisfactory (2.0)");
-                                return "Satisfactory (2.0)";
+                                console.log("Satisfactory (100%)");
+                                return "Satisfactory (100%)";
                             }
                             if(AGE > 19.4){
-                                console.log("Poor (7.0)");
-                                return "Poor (7.0)";
+                                console.log("Poor (100%)");
+                                return "Poor (100%)";
                             }
                         }
                         if(FREEZE_INDEX_YR > 183){
                             if(PCI0 <= 95.7){
                                 if(PCI0 <= 77.3){
                                     if(PCI0 <= 75.3){
-                                        console.log("Fair (2.0)");
-                                        return "Fair (2.0)";
+                                        console.log("Fair (100%)");
+                                        return "Fair (100%)";
                                     }
                                     if(PCI0 > 75.3){
-                                        console.log("Poor (2.0)");
-                                        return "Poor (2.0)";
+                                        console.log("Poor (100%)");
+                                        return "Poor (100%)";
                                     }
                                 }
                                 if(PCI0 > 77.3){
-                                    console.log("Very Poor (6.0/1.0)");
-                                    return "Very Poor (6.0/1.0)";
+                                    console.log("Very Poor (86%)");
+                                    return "Very Poor (86%)";
                                 }
                             }
                             if(PCI0 > 95.7){
                                 if(PAVEMENT_TYPE <= 1){
-                                    console.log("Fair (7.0/3.0)");
-                                    return "Fair (7.0/3.0)";
+                                    console.log("Fair (70%)");
+                                    return "Fair (70%)";
                                 }
                                 if(PAVEMENT_TYPE > 1){
-                                    console.log("Satisfactory (2.0)");
-                                    return "Satisfactory (2.0)";
+                                    console.log("Satisfactory (100%)");
+                                    return "Satisfactory (100%)";
                                 }
                             }
                         }
                     }
                     if(MAX_ANN_TEMP_AVG > 20.4){
-                        console.log("Good (7.0)");
-                        return "Good (7.0)";
+                        console.log("Good (100%)");
+                        return "Good (100%)";
                     }
                 }
             }
             if(AGE > 27.37){
                 if(PAVEMENT_TYPE <= 3){
                     if(FREEZE_INDEX_YR <= 461){
-                        console.log("Very Poor (15.0/1.0)");
-                        return "Very Poor (15.0/1.0)";
+                        console.log("Very Poor (94%)");
+                        return "Very Poor (94%)";
                     }
                     if(FREEZE_INDEX_YR > 461){
-                        console.log("Poor (2.0)");
-                        return "Poor (2.0)";
+                        console.log("Poor (100%)");
+                        return "Poor (100%)";
                     }
                 }
                 if(PAVEMENT_TYPE > 3){
-                    console.log("Fair (13.0/1.0)");
-                    return "Fair (13.0/1.0)";
+                    console.log("Fair (93%)");
+                    return "Fair (93%)";
                 }
             }
         }
     }
 
-    return ""
+    return "";
 }
 
 //preprocessing
@@ -848,7 +1314,7 @@ $(document).ready(function(){
     console.log(slider.value+"\n");
     switch(parseInt(slider.value)) {
       case 2:
-        console.log("2\n");
+        console.log("Using tree2\n");
         result_string = tree2(
           $("#PCI0").val(),
           $("#AADT").val(),
@@ -864,9 +1330,24 @@ $(document).ready(function(){
           $("#TOTAL_ANN_PRECIP").val()
         );
         break;
+      case 3:
+        console.log("Using tree3\n");
+        result_string = tree3(
+          $("#PCI0").val(),
+          $("#AADT").val(),
+          $("#AGE").val(),
+          $("#FREEZE_INDEX_YR").val(),
+          $("#FREEZE_THAW_YR").val(),
+          findGBE(".GBE_TYPE",".GBE_THICK"),
+          DecodeType($("#PAVEMENT_TYPE").val(),pav_type_parsed),
+          $("#MAX_ANN_TEMP_AVG").val(),
+          $("#REMED_YEARS").val(),
+          $("#TOTAL_ANN_PRECIP").val()
+        );
+        break;
       case 5:
-        console.log("5\n");
-        result_string = tree2(
+        console.log("Using tree5\n");
+        result_string = tree5(
           $("#PCI0").val(),
           $("#AADT").val(),
           $("#AGE").val(),
@@ -882,8 +1363,8 @@ $(document).ready(function(){
         );
         break;
       case 6:
-        console.log("6\n");
-        result_string = tree2(
+        console.log("Using tree6\n");
+        result_string = tree6(
           $("#PCI0").val(),
           $("#AADT").val(),
           $("#AGE").val(),
@@ -899,7 +1380,7 @@ $(document).ready(function(){
         );
         break;
       default:
-        console.log("default:2\n");
+        console.log("Default: tree2\n");
         result_string = tree2(
           $("#PCI0").val(),
           $("#AADT").val(),
